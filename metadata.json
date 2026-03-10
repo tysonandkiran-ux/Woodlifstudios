@@ -1,0 +1,7 @@
+{
+  "name": "Woodlife Studios",
+  "description": "A premium architecture and interior design studio specializing in bespoke luxury living spaces, inspired by nature and modern craftsmanship.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
