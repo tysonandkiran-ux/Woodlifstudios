@@ -11,18 +11,18 @@ export const SERVICES: Service[] = [
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1500'
   },
   {
-    id: 'decor-art',
-    title: 'Decor & Art',
-    description: 'Curating bespoke furniture, fine art, and premium textures to create a truly personalized atmosphere.',
-    icon: <Palette className="w-6 h-6" />,
-    image: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=1500'
-  },
-  {
     id: 'renovation',
     title: 'Renovation',
     description: 'Transforming existing structures into contemporary masterpieces while preserving their soul.',
     icon: <Home className="w-6 h-6" />,
     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1500'
+  },
+  {
+    id: 'decor-art',
+    title: 'Decor & Art',
+    description: 'Curating bespoke furniture, fine art, and premium textures to create a truly personalized atmosphere.',
+    icon: <Palette className="w-6 h-6" />,
+    image: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=1500'
   },
   {
     id: 'construction',
@@ -40,7 +40,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'layouts',
-    title: '2D & 3D Layouts',
+    title: '2D / 3D Layouts',
     description: 'Advanced visualization and spatial planning to ensure every detail is perfectly realized.',
     icon: <Layers className="w-6 h-6" />,
     image: 'https://images.unsplash.com/photo-1503387762-592dee58c160?auto=format&fit=crop&q=80&w=1500'

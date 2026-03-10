@@ -28,34 +28,37 @@ export const Blog: React.FC = () => {
   ];
 
   return (
-    <div className="pt-32 pb-20 bg-sand">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="pt-48 pb-40 bg-light-beige">
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
         <SectionHeading 
           title="Design Insights" 
           subtitle="Our latest thoughts on architecture, interiors, and the art of living well."
-          centered
+          align="center"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
-          {posts.map((post) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-32">
+          {posts.map((post, index) => (
             <motion.div 
               key={post.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 1.2 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[4/3] overflow-hidden mb-6">
+              <div className="relative aspect-[4/3] overflow-hidden mb-10 shadow-xl">
                 <img 
                   src={post.image} 
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110"
+                  referrerPolicy="no-referrer"
                 />
+                <div className="absolute inset-0 bg-ashy-black/20 group-hover:bg-ashy-black/0 transition-colors duration-1000" />
               </div>
-              <p className="text-[10px] uppercase tracking-widest text-gold mb-3">{post.date}</p>
-              <h3 className="text-2xl font-serif text-charcoal mb-4 group-hover:text-gold transition-colors">{post.title}</h3>
-              <p className="text-sm text-charcoal/70 leading-relaxed mb-6">{post.excerpt}</p>
-              <button className="text-xs uppercase tracking-widest border-b border-gold pb-1 hover:text-gold transition-colors">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-medium-brown mb-4 font-semibold">{post.date}</p>
+              <h3 className="text-3xl font-serif text-ashy-black mb-6 group-hover:text-medium-brown transition-colors duration-700 leading-tight">{post.title}</h3>
+              <p className="text-lg text-ashy-black/70 leading-relaxed mb-8 font-light">{post.excerpt}</p>
+              <button className="text-[10px] uppercase tracking-[0.4em] border-b border-medium-brown/30 pb-2 hover:text-medium-brown hover:border-medium-brown transition-all duration-500 font-bold">
                 Read More
               </button>
             </motion.div>

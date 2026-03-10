@@ -13,9 +13,9 @@ export const Button: React.FC<ButtonProps> = ({ children, onClick, variant = 'pr
   const baseStyles = "px-10 py-5 text-[10px] uppercase tracking-ultra font-medium transition-all duration-700 relative overflow-hidden group flex items-center justify-center";
   
   const variants = {
-    primary: "bg-ochre text-luxury-black hover:bg-white",
-    secondary: "bg-walnut text-white hover:bg-ochre",
-    outline: "border border-luxury-black/10 text-luxury-black hover:border-luxury-black hover:bg-luxury-black hover:text-white"
+    primary: "bg-medium-brown text-white hover:bg-white hover:text-ashy-black",
+    secondary: "bg-light-beige text-white hover:bg-medium-brown",
+    outline: "border border-ashy-black/10 text-ashy-black hover:border-ashy-black hover:bg-ashy-black hover:text-white"
   };
 
   return (
@@ -40,13 +40,14 @@ export const SectionHeading: React.FC<{
   light?: boolean;
 }> = ({ title, subtitle, align = 'left', light = false }) => {
   return (
-    <div className={`mb-24 ${align === 'center' ? 'text-center' : 'text-left'}`}>
+    <div className={`mb-32 ${align === 'center' ? 'text-center' : 'text-left'}`}>
       {subtitle && (
         <motion.span 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className={`text-[9px] uppercase tracking-ultra mb-6 block ${light ? 'text-white/50' : 'text-ochre'}`}
+          transition={{ duration: 1 }}
+          className={`text-[10px] uppercase tracking-[0.5em] mb-8 block font-semibold ${light ? 'text-white/40' : 'text-medium-brown/60'}`}
         >
           {subtitle}
         </motion.span>
@@ -55,8 +56,8 @@ export const SectionHeading: React.FC<{
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.1, duration: 0.8 }}
-        className={`text-heading-lg font-serif ${light ? 'text-white' : 'text-luxury-black'}`}
+        transition={{ delay: 0.2, duration: 1.2 }}
+        className={`text-heading-lg font-serif leading-tight ${light ? 'text-white' : 'text-ashy-black'}`}
       >
         {title}
       </motion.h2>
